@@ -52,8 +52,8 @@ gazelle_dependencies()
 go_repository(
     name = "com_github_mattn_go_slim",
     importpath = "github.com/mattn/go-slim",
-    sum = "h1:GF43XHtQ/ewS07mITQZyi9gXhWZ7x7crGWp2hvHUEkM=",
-    version = "v0.0.0-20190926010428-236f1c35e4e6",
+    sum = "h1:FZ/1leXcHnDpGdy7Iu8pdna+hsR75TYHaL1slgVGZDE=",
+    version = "v0.0.3",
 )
 
 # From the rules_go documentation:
