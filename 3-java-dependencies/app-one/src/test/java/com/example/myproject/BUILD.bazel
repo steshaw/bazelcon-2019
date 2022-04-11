@@ -16,6 +16,6 @@ java_test(
 java_library(
     name = "java_test_deps",
     exports = [
-        "@maven//:junit_junit",
+        "@mvn//:junit_junit",
     ],
 )
