@@ -20,11 +20,11 @@ public class Greeter {
   public static void main(String... args) throws Exception {
     Multiset<String> words = HashMultiset.create();
     for (String arg : args) {
-      out.println("arg = " + arg);
+      System.err.println("arg = " + arg);
       words.add(arg);
     }
     Greeter greeter = new Greeter();
-    String subject = new Integer(words.count("world")).toString();
+    String subject = words.count("world") == 1? "world" : "worlds";
     greeter.greet(subject);
   }
 };
