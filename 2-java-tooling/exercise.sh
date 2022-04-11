@@ -11,10 +11,7 @@ bazel run :hello-world
 bazel run :hello-worlds
 
 # See a list of targets:
-# bazel query '...'
+bazel query '...'
 
-# See a diagram of the those tarage (on a Mac with graphviz installed)
-# bazel query --output=graph '...' | dot -Tpng >temp.png ; open temp.png
-
-# This is extraordinarily helpful in projects that require (correct,
-# i.e. generated) documentation of how things work.
+# Generate a diagram of the those targets via Graphviz.
+bazel query --output=graph '...' | dot -Tpng -o deps.png
