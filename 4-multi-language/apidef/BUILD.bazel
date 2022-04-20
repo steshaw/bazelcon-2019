@@ -1,17 +1,3 @@
-package(default_visibility = ["//visibility:public"])
-
-# What if we repeated this structure often, across many projects?
-# Would we need to carefully maintain the naming pattern by hand
-# in each? No, let's use a macro.
-
-# load("//rules:acme_corporate_standards.bzl", "acme_grpc")
-
-# acme_grpc(
-#     name = "api_proto",
-#     srcs = ["api.proto"],
-#     go_import_path = "proto/grocery/api",
-# )
-
 load("//:rules/std.bzl", "std_grpc")
 std_grpc(
   name = "api-proto",
