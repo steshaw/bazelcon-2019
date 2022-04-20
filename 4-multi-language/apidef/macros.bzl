@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
 load("@rules_java//java:defs.bzl", "java_proto_library")
 load("@io_grpc_grpc_java//:java_grpc_library.bzl", "java_grpc_library")
 
-def std_grpc(name, srcs):
+def std_grpc(name, srcs, go_importpath):
     java = "%s-java" % name
 
     proto_library(
@@ -14,7 +14,7 @@ def std_grpc(name, srcs):
     go_proto_library(
         name = "%s-go" % name,
         compilers = ["@io_bazel_rules_go//proto:go_grpc"],
-        importpath = "proto/grocery/api",
+        importpath = go_importpath,
         proto = ":api-proto",
     )
 

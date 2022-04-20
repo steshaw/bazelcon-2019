@@ -16,4 +16,5 @@ load("macros.bzl", "std_grpc")
 std_grpc(
   name = "api-proto",
   srcs = ["api.proto"],
+  go_importpath = "proto/grocery/api",
 )
