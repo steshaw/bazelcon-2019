@@ -12,7 +12,7 @@ package(default_visibility = ["//visibility:public"])
 #     go_import_path = "proto/grocery/api",
 # )
 
-load("//:std.bzl", "std_grpc")
+load("//:rules/std.bzl", "std_grpc")
 std_grpc(
   name = "api-proto",
   srcs = ["api.proto"],
