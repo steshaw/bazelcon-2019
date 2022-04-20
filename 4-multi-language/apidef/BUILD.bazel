@@ -13,4 +13,7 @@ package(default_visibility = ["//visibility:public"])
 # )
 
 load("macros.bzl", "std_grpc")
-std_grpc(name = "api-proto")
+std_grpc(
+  name = "api-proto",
+  srcs = ["api.proto"],
+)
