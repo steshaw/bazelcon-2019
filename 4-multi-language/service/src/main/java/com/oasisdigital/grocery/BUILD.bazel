@@ -15,7 +15,7 @@ java_library(
     name = "grocery-lib",
     srcs = ["GroceryListServer.java"],
     deps = [
-        "//apidef:api_proto_java",
+        "//apidef:api-proto-java",
         "//apidef:api_proto_java_lib",
         "@io_grpc_grpc_java//core",
         "@io_grpc_grpc_java//netty",

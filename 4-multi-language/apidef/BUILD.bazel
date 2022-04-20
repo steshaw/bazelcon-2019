@@ -18,14 +18,14 @@ go_proto_library(
 )
 
 java_proto_library(
-    name = "api_proto_java",
+    name = "api-proto-java",
     deps = [":api_proto"],
 )
 
 java_grpc_library(
     name = "api_proto_java_lib",
     srcs = [":api_proto"],
-    deps = [":api_proto_java"],
+    deps = [":api-proto-java"],
 )
 
 # What if we repeated this structure often, across many projects?
