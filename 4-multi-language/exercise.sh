@@ -1,14 +1,9 @@
 #!/bin/bash
 
 set -e
-# Avoid certain problems under MSYS on Windows
-export MSYS_NO_PATHCONV=1
-export MSYS2_ARG_CONV_EXCL="*"
 
-bazel build '...'
-
-# No test for this one yet.
-# bazel test '...' --test_verbose_timeout_warnings --test_output=errors
+bazel build //...
+bazel test //... --test_verbose_timeout_warnings --test_output=errors
 
 # In separate windows:
 # bazel run :frontend
